@@ -105,7 +105,7 @@ resource "terraform_data" "mysql" {
 
   provisioner "file" {
     source    = "boostrap.sh" # Local file path
-    destination = '/tmp/boostrap.sh"
+    destination = "/tmp/boostrap.sh"
   }
 
   provisioner "remote-exec" {
