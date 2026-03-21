@@ -78,7 +78,7 @@ resource "terraform_data" "bootstrap_redis" {
 
 
 resource "aws_instance" "mysql" {
-   ami     = loacl.ami_id
+   ami     = local.ami_id
    instance_type = "t3.micro"
    subnet_id     = local.database_subnet_id
    vpc_security_group_ids = [local.mysql_sg_id]
@@ -87,7 +87,7 @@ resource "aws_instance" "mysql" {
     {
       Name = "${var.project}-${var.environment}-mysql"
     },
-    local
+    local.common_tags
    )
 }
 
