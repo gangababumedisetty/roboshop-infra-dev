@@ -12,6 +12,7 @@
             "Effect": "Allow",
             "Action": "ssm:DescribeParameters",
             "Resource": "*"
+            mf
         }
     ]
 }
