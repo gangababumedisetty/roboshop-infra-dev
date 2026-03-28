@@ -2,6 +2,7 @@
 
 component=$1
 environment=$2
+app_version=$3
 dnf install ansible -y
 
 cd /home/ec2-user
